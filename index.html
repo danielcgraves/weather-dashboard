@@ -9,19 +9,25 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <h1>Weather Dashboard</h1>
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+    </header>
 
-    <section class="search-container">
-        <h2>Search for a City:</h2>
-        <input type="text" placeholder="Search" id="city-input">
-        <button type="submit" id="search-btn">Search</button>
-    </section>
+    <div class="flex-container">
+        <section class="search-container">
+            <h2>Search for a City:</h2>
+            <input type="text" placeholder="Search" id="city-input">
+            <button type="submit" id="search-btn">Search</button>
+        </section>
 
-    <section class="current-weather-container">
-        
-    </section>
+        <section class="weather-container"> 
+            <h2>City</h2>
+            <p>Temp:</p>
+            <p>Wind:</p>
+            <p>Humidity:</p>
+        </section>
 
-    <section class="forcast-container"></section>
+    </div>
 
     <script src="./assets/script.js"></script>
 </body>

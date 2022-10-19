@@ -1,0 +1,67 @@
+
+/* Universal */
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles */
+
+.header {
+    text-align: center;
+    color: white;
+    background-color: darkblue;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/* Search Section Styles */
+
+.search-container {
+    padding: 0 1rem;
+}
+
+.search-container h2 {
+    margin: 0;
+}
+
+#city-input {
+    padding: 6px 0;
+    margin: 6px 0;
+}
+
+#search-btn {
+    color: white;
+    background-color: rgb(32, 162, 213);
+    border: none;
+
+}
+
+#city-input,
+button {
+    width: 19rem;
+    border-radius: 3px;
+}
+
+button {
+    display: block;
+    padding: 4px 0;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Current Weather Section Styles */
+
+.weather-container {
+    border: 1px solid black;
+    width: 100%;
+    margin-right: 100px;
