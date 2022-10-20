@@ -5,6 +5,9 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: rgb(226, 226, 226)
+}
 /* Header Styles */
 
 .header {
@@ -74,12 +77,41 @@ button:hover {
     opacity: 0.85;
 }
 
-/* Current Weather Section Styles */
+/* Weather Section Styles */
 
 .weather-container {
-    border: 1px solid black;
     width: 100%;
+}
+
+.current-weather {
+    border: 1px solid black;
     margin-right: 50px;
     padding-left: 5px;
+}
+
+h2 {
+    margin-top: 2px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.card {
+    background-color: rgb(105, 105, 105);
+    padding: 1px 0 10px 2px;
+    margin: 2px 10px 0 0;
+    color: white;
+    width: 20%;
+}
+
+.hide {
+    display: none;
+} 
+
+img {
+   size: 50%;
 }
 
