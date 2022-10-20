@@ -10,6 +10,6 @@ You can find this quiz at https://danielcgraves.github.io/weather-dashboard
 
 ## Screenshot
 
-![Alt text](/assets/weather-dashboard-screenshot.png.?raw=true "screenshot of the weather dashboard")
+![Alt text](/assets/weather-dashboard-screenshot.png?raw=true "screenshot of the weather dashboard")
 
 
