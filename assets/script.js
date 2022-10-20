@@ -1,19 +1,10 @@
-//Pseudocode
 
-    //Another section will include a five day (future) forcast displaying all of the same information as the current temperature section.
-//3. When clicking a city in the "search history" it will take me back to the page with all of the information above.
 
 //Variables
 
 var currentCityName = document.getElementById("current-city-name");
 
-
-
-
-
-
-//Date Variables
-
+//Date Variables----------------------------//
 
     //Today's Date
 
@@ -39,7 +30,6 @@ var dayTwoDateEl = document.getElementById("day-two-date");
     
 var dayTwoDateFormatted = dayTwoDate.toLocaleDateString();
     
-
     //Day 3 Date
 
 var dayThreeDate = new Date(date);
@@ -67,7 +57,6 @@ var dayFiveDateEl = document.getElementById("day-five-date");
     
 var dayFiveDateFormatted = dayFiveDate.toLocaleDateString();
 
-
     //Temperature Variables
 
 var currentTemp = document.getElementById("current-temp");
@@ -81,9 +70,6 @@ var dayThreeTemp = document.getElementById("day-three-temp");
 var dayFourTemp = document.getElementById("day-four-temp");
 
 var dayFiveTemp = document.getElementById("day-five-temp");
-
-
-
 
     //Wind Speed Variables
 
@@ -100,11 +86,6 @@ var dayFourWindSpeed = document.getElementById("day-four-wind");
 
 var dayFiveWindSpeed = document.getElementById("day-five-wind");
 
-
-
-
-
-
     //Humidity Variables
 
 var currentHumidity = document.getElementById("current-humidity");
@@ -119,12 +100,6 @@ var dayFourHumidity = document.getElementById("day-four-humidity");
 
 var dayFiveHumidity = document.getElementById("day-five-humidity");
 
-
-
-
-
-
-
     //Other Variables
 
 var cityInputEl = document.getElementById("city-input");
@@ -134,6 +109,7 @@ var searchButtonEl = document.getElementById("search-btn")
 var city = cityInputEl.value;
 
 var cards = document.querySelectorAll(".card");
+
 
 
 
@@ -166,6 +142,8 @@ searchButtonEl.addEventListener("click", function (event) {
         newButton.innerHTML = previousCity;
         newButton.classList.add("past-btn");
         document.getElementById("search-container").appendChild(newButton);
+
+        //When User Clicks the newButton they get a search result
         
         newButton.addEventListener("click", function (event) {
             event.preventDefault();
@@ -176,6 +154,9 @@ searchButtonEl.addEventListener("click", function (event) {
 
     searchHistory();  
 })
+
+
+
 
 //Main Functions
 
