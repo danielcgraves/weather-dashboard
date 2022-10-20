@@ -21,18 +21,40 @@ var city = cityInputEl.value;
 
 
 
-//EventListeners
+//EventListeners which sets and gets localStorage items.
 
 searchButtonEl.addEventListener("click", function (event) {
     event.preventDefault();
-
-
 
     if (!cityInputEl.value) return;
 
     performSearch(cityInputEl.value);
 
+    var pastCityInput = cityInputEl.value;
+    localStorage.setItem("pastCityInput", JSON.stringify(pastCityInput));
+   
+    function searchHistory() {
+        var history = JSON.parse(localStorage.getItem("searchHistory") || "[]");
+        var updatedHistory = history.concat(pastCityInput);
+
+        if (!history) return;
+
+        localStorage.setItem("searchHistory", JSON.stringify(updatedHistory));
+
+        for (let i = 0; i < updatedHistory.length; i++) {
+        }
+
+        var previousCity = updatedHistory.pop();
+        var newButton = document.createElement("button");
+        newButton.innerHTML = previousCity;
+        newButton.classList.add("past-btn");
+        document.getElementById("search-container").appendChild(newButton);    
+    }
+
+    searchHistory();  
 })
+
+//Main Functions
 
 
 function getSearchResults(city) {
@@ -47,20 +69,33 @@ function getSearchResults(city) {
 }
 
 function performSearch(city) {
+
+
     getSearchResults(city).then(function(data){
         console.log(data);
+        var iconImg;
+
+        function loadIcon() {
+            iconImg = new Image(30,30);
+            iconImg.src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+        }
+        
+        loadIcon();
+
+        console.log(iconImg);
+
         currentCityName.textContent = data.name + " " + dateFormatted;
+
+        document.getElementById("current-city-name").appendChild(iconImg);
+
+
         currentTemp.textContent = "Temp: " + data.main.temp + "F";
         currentWindSpeed.textContent = "Wind: " + data.wind.speed + "mph";
         currentHumidity.textContent = "Humidity: " + data.main.humidity + "%";
+
     })
+
+
 }
 
 
- 
-/* function performSearch() {
-    getSearchResults().then(function (data){
-
-    })
-}
- */

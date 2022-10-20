@@ -37,11 +37,26 @@
     margin: 6px 0;
 }
 
-#search-btn {
-    color: white;
-    background-color: rgb(32, 162, 213);
-    border: none;
 
+.btn-container {
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#search-btn {
+     background-color: rgb(32, 162, 213);
+}
+
+.past-btn {
+    background-color: gray;
+    margin-bottom: 3px;
+}
+
+#search-btn,
+.past-btn {
+    color: white;
+    border: none;
 }
 
 #city-input,
@@ -67,3 +82,4 @@ button:hover {
     margin-right: 50px;
     padding-left: 5px;
 }
+
