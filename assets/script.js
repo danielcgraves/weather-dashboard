@@ -162,7 +162,7 @@ searchButtonEl.addEventListener("click", function (event) {
 
 
 function getSearchResults(city) {
-    var url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=e6e83f4fb26faf5d75b3667dbf50e5db&units=imperial`;
+    var url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=e6e83f4fb26faf5d75b3667dbf50e5db&units=imperial`;
 
     return fetch(url).then(function (response) {
         if (!response.ok) throw new Error(response.statusText);
@@ -189,21 +189,21 @@ function performSearch(city) {
 
         var dayFiveIconImg = document.getElementById("day-five-icon");
 
-        iconImg.src = "http://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png";
+        iconImg.src = "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png";
 
-        tomorrowIconImg.src = "http://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + "@2x.png";
-
-
-        dayTwoIconImg.src = "http://openweathermap.org/img/wn/" + data.list[2].weather[0].icon + "@2x.png";
+        tomorrowIconImg.src = "https://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + "@2x.png";
 
 
-        dayThreeIconImg.src = "http://openweathermap.org/img/wn/" + data.list[3].weather[0].icon + "@2x.png";
+        dayTwoIconImg.src = "https://openweathermap.org/img/wn/" + data.list[2].weather[0].icon + "@2x.png";
+
+
+        dayThreeIconImg.src = "https://openweathermap.org/img/wn/" + data.list[3].weather[0].icon + "@2x.png";
 
  
-        dayFourIconImg.src = "http://openweathermap.org/img/wn/" + data.list[4].weather[0].icon + "@2x.png";
+        dayFourIconImg.src = "https://openweathermap.org/img/wn/" + data.list[4].weather[0].icon + "@2x.png";
 
 
-        dayFiveIconImg.src = "http://openweathermap.org/img/wn/" + data.list[5].weather[0].icon + "@2x.png";
+        dayFiveIconImg.src = "https://openweathermap.org/img/wn/" + data.list[5].weather[0].icon + "@2x.png";
         
         
 
